@@ -1,6 +1,7 @@
 body{
     background-color: #EBFFEB;
     text-align: center; 
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 #header{
@@ -43,6 +44,7 @@ body{
     color: white;
     font-size: 70%;
     float:inline-end;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 #map{
