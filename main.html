@@ -25,12 +25,11 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 
-
 <html lang="ko">
 <body>
     <div id = "total">
         <div id = "header">
-            <h1><a href="main.html">한별한의원</a></h1>
+            <h1><a href="main.html"><img src="images/로고.png" alt="logo" width="100" height="100"/>한별한의원</a></h1>
         </div>
         <div id = "navigation">
             <ul>
@@ -42,8 +41,14 @@
         </div>
         <div id = "contents">
             <p>
-                <img src="tempo1.jpg" alt="한별한의원" width="500" height="600"/>
+                <img src="images/ent.jpg" alt="한별한의원" width="750" height="426"/>
             </p>
+            
+            <video width="390" height="260" autoplay muted>
+                <source src="samplevideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            
             <div id="map" style="width: 390px; height: 260px;"></div>
             <script>
 
@@ -59,9 +64,15 @@
                 }).addTo(mymap);
 
                 L.marker([35.83101203190144, 127.15859086919606]).addTo(mymap)
-		.bindPopup("<b>한별 한의원</b><br />전라북도 전주시 덕진구 견훤로 215").openPopup();
+		.bindPopup("<b>한별한의원</b><br />전라북도 전주시 덕진구 견훤로 215").openPopup();
             
             </script>
+            <p class="way">
+                <h3>오시는 길</h3><br />
+                오시는 길 소개<br />
+                오시는 길 소개<br />
+                오시는 길 소개
+            </p>
             <p class="spacer"></p>
         </div>
         <div id = "footer_wrap">
@@ -76,5 +87,4 @@
             </div>
         </div>
     </div>
-
 </body>
