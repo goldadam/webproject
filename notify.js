@@ -29,3 +29,9 @@ function notifyNotice(){
         location.replace('notice.html');
     }
 }
+function notifyUpper(){
+    var val = confirm("이 페이지를 벗어나면 작성한 내용을 잃게 됩니다. 나가시겠습니까?")
+    if(val){
+        location.replace('http://www.hanstar21.com/');
+    }
+}
