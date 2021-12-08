@@ -1,20 +1,43 @@
-body{
-    background-color: #EBFFEB;
-    text-align: center;   
-    font-family: 'Nanum Gothic', sans-serif;
+@font-face {
+    font-family: 'Arita-dotum-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+@font-face {
+    font-family: 'SF_HambakSnow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Eulyoo1945-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Eulyoo1945-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-image : url("images/한지.png");
+    background-size : cover;
+    text-align: center;
+    font-family: 'Eulyoo1945-SemiBold';
+}
+
 
 #header h1 a{
     text-decoration: none;
-    font-size : 200%;
+    font-size : 150%;
     color: #006400;
+    font-family: 'SF_HambakSnow';
 }
 
 #navigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #64CD3C;
+    background-color : rgb(145, 182, 151);
+    font-family: 'SF_HambakSnow';
 }
 #navigation ul:after{
     content:'';
@@ -29,22 +52,31 @@ body{
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 130%;
+    font-size: 110%;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 }
 #navigation li a:hover:not(.active) {
-    background-color: #006400;
+    background: rgb(80, 119, 86);
+    transition: background 1s ease-out;
 }
 
 #footer {
-    background-color: #006400;
+    background-color: rgb(145, 182, 151);
     color: white;
     font-size: 70%;
     float:inline-end;
     font-family: 'Nanum Gothic', sans-serif;
 }
 
+#footer a{
+    color:rgb(145, 182, 151);
+}
+
 #map{
     float:right;
+    margin-right: 60px;
 }
 
 .spacer{
@@ -57,10 +89,15 @@ body{
 
 video{
     float:left;
+    margin-left: 60px;
 }
 
 .way{
     float:center;
+}
+
+h3 .way{
+    color : rgb(145, 182, 151);
 }
 
 a {
@@ -83,7 +120,7 @@ a {
 #contents #spec{
     margin-left: 680px;
     text-align: left;
-    color:#64CD3C;
+    color : #006400bd;
     font-size: 130%;
 }
 
@@ -105,7 +142,7 @@ a {
 }
 
 .ttl{
-    font-size: 250%;
+    font-size: 150%;
     color: #006400;
     text-align:left;
     margin-left: 720px;
@@ -119,9 +156,57 @@ a {
 
 .maingreet{
     text-align: left;
-    margin-left: 900px;
+    margin-left: 850px;
+    margin-right:80px;
 }
 
+.semititle{
+    text-align: left;
+    margin-left: 850px;
+    margin-right:80px;
+    color : rgb(80, 119, 86);
+}
+
+.semititle2{
+    color : rgb(80, 119, 86);
+}
+
+.grid-image {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    margin:10px 0;
+    margin-right : 0;
+}
+.grid-image img {
+    width:calc((33.333% - 10px)/3);
+    margin:10px 10px 10px 10px;
+    transition-duration: 1s;
+}
+
+.grid-image img:hover {
+    filter: brightness(70%);
+    transition: filter 1s;
+    transition: filter 1s ease-out;
+}
+
+@media screen and (max-width:640px){
+.grid-image img {
+    width:calc(50% - 15px);
+  }
+}
+@media screen and (max-width:480px){
+ .grid-image img:nth-of-type(2n) {
+    margin-right:10px;
+  }
+.grid-image img:nth-of-type(3n) {
+    margin-right:10px;
+  }
+}
+
+#tel{
+    color: #27aa27;
+}
 /*공지 사항 게시판*/
 @media (max-width: 1000px) {
     .board_wrap {
