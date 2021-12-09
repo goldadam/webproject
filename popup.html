@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="EUC-KR">
+        <title>팝업창 오픈</title>
+        <script type = "text/javascript" src="popup.js"></script>
+        <script language = "text/javascript">
+     
+    </head>
+    function setCookie(name, value, expiredays){
+        var todayDate = Date();
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        document.cookie = name + "=" + escape(value) + " ;path=/ ; expires=" + todayDate.toGMTString() + ";"}
+        function closePop(){
+            if(document.pop_form.chbox.checked){
+                setCookie("maindiv", "done", 1);
+            }
+            document.all['layer_popup'].style.visibility = "hidden";
+        }
+    </script>
+        <script language="text/javascript">
+            cookiedata = document.cookie;
+            if(cookiedata.indexOf("maindv=done") < 0){
+                document.all['layer_popup'].style.visibility = "hidden";
+            }
+            else{
+                document.all['layer_popup'].style.visibility = "hidden";
+            }
+        </script>
+    
+
+    <body>
+
+
+
+
+    </body>
+</html>
+
