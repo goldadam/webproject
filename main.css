@@ -203,6 +203,7 @@ a {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transition: all 0.3s ease-in-out;
+    overflow : hidden;
 }
 
 
@@ -223,11 +224,12 @@ a {
     transition: filter 1s;
     transition: filter 1s ease-out;
 
-    transform: scale(1.5);
+    transform: scale(2.0);
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     -ms-transform: scale(1.5);
     -o-transform: scale(1.5);
+   
     
 }
 
