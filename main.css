@@ -27,7 +27,7 @@ body{
 
 #header h1 a{
     text-decoration: none;
-    font-size : 150%;
+    font-size : 4vw;
     color: #006400;
     font-family: 'SF_HambakSnow';
 }
@@ -50,9 +50,9 @@ body{
 #navigation li a {
     display: block;
     color: white;
-    padding: 14px 16px;
+    padding: 0.9722vw 1.1111vw;
     text-decoration: none;
-    font-size: 110%;
+    font-size: 1.33vw;
     transition-property: background-color;
     transition-duration: 1s;
     transition-timing-function: ease-out;
@@ -65,9 +65,10 @@ body{
 #footer {
     background-color: rgb(145, 182, 151);
     color: white;
-    font-size: 70%;
+    font-size: 0.4861vw;
     float:inline-end;
     font-family: 'Nanum Gothic', sans-serif;
+    position:relative;
 }
 
 #footer a{
@@ -77,8 +78,8 @@ body{
 #map{
     float:right;
     margin-right: 5%;
-    width: 390px; 
-    height: 260px;
+    width: 27.0833vw; 
+    height: 18.0556vw;
 }
 
 .spacer{
@@ -157,12 +158,14 @@ a {
 }
 
 .maingreet{
+    font-size:1.27vw;
     text-align: left;
     margin-left: 71%;
     margin-right: 6.7%;
 }
 
 .semititle{
+    font-size:2vw;
     text-align: left;
     margin-left: 71%;
     margin-right: 6.7%;
@@ -170,9 +173,13 @@ a {
 }
 
 .semititle2{
+    font-size:1.6vw;
     color : rgb(80, 119, 86);
 }
 
+.semi{
+    font-size:1.27vw;
+}
 .grid-image {
     display:flex;
     flex-wrap:wrap;
