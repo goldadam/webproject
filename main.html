@@ -22,6 +22,39 @@
             }
         });
     </script>
+    <script language="JavaScript">
+        function change(form){
+            if(form.url.selectedIndex != 0)
+            parent.location = form.url.options[form.url.selectedIndex].value
+        }
+        function setCookie(name, value, expiredays){
+            var todayDate = new Date();
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+
+        }
+        function getCookie(name){
+            var nameOfCookie = name + "=";
+            var x = 0;
+                while(x <= document.cookie.length){
+                    var y = (x + nameOfCookie.length);
+                    if(document.cookie.substring(x,y) == nameOfCookie){
+                        if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+                            endOfCookie = document.cookie.length;
+                        return unescape(document.cookie.substring(y, endOfCookie)); 
+                    }
+                    x = document.cookie.indexOf(" ", x) + 1;
+                    if(x == 0)
+                    break;
+                }
+                return " ";
+        }
+        if ( getCookie( "Notice" ) != "done" ) {
+            noticeWindow  =  window.open('noticeJS.html','notice','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=200');
+            noticeWindow.opener = self;
+        }
+        
+    </script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -88,9 +121,9 @@
             </script>
             <p class="way">
                 <h3 class="semititle2">오시는 길</h3><br />
-                오시는 길 소개<br />
-                오시는 길 소개<br />
-                오시는 길 소개
+                다이소 인후2호점에서 직진거리 200m<br />
+                인후초등학교에서 동진아파트 방면으로 600m<br />
+                
             </p>
             <p class="spacer"></p>
         </div>
