@@ -21,7 +21,7 @@ body{
     background-image : url("images/한지.png");
     background-size : cover;
     text-align: center;
-    font-family: 'Eulyoo1945-SemiBold';
+    font-family: 'Eulyoo1945-SemiBold';;
 }
 
 
@@ -77,6 +77,8 @@ body{
 #map{
     float:right;
     margin-right: 5%;
+    width: 390px; 
+    height: 260px;
 }
 
 .spacer{
@@ -106,12 +108,12 @@ a {
 
 #contents #intro{
     float:left;
-    margin-left: 90px;
+    margin-left: 7.5%;
     border-radius: 20px;
 }
 
 #contents #name{
-    font-size: 250%;
+    font-size: 200%;
     color: #006400;
     margin-left: 57%;
     text-align: left;
@@ -121,7 +123,7 @@ a {
     margin-left: 57%;
     text-align: left;
     color : #006400bd;
-    font-size: 130%;
+    font-size: 100%;
 }
 
 #contents #greet{
@@ -179,7 +181,8 @@ a {
     margin-right : 0;
 }
 .grid-image img {
-    width:calc((33.333% - 10px)/3);
+    width:calc((33.333% - 0.83%)/3);
+    height:calc((33.333% - 0.83%)/3);
     margin:0.8% 0.8% 0.8% 0.8%;
     transition-duration: 1s;
 }
