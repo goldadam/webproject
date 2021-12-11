@@ -1,3 +1,4 @@
+const { application } = require('express');
 var express = require('express');
 var router = express.Router();
 var mysql_odbc = require('../db/db_conn')();
@@ -107,6 +108,15 @@ router.post('/delete',function(req,res,next)
         }
     });
 });
+
+
+router.get('/', function(req, res, next){
+    res.render('main',{title : "메인 홈페이지"})
+});
+
+/*router.get('/', function(요청,응답){
+    응답.sendFile(path.join(__dirname,))
+})*/
 
 
 module.exports = router;

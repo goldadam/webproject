@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logo.png">
+	<title>한별한의원에 오신 것을 환영합니다</title>
+
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" title="style" />
+    <script src="main.js" type="text/javascript"></script>
+    <script src="imgpopup.js" type="text/javascript"></script>
+    <script src="prototype.js" type="text/javascript"></script>
+    <script>
+        WebFont.load({
+            google: {
+            families: ['NanumB', 'NanumR', 'NanumEB']
+            }
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+
+<html lang="ko">
+<body>
+    <div id = "total">
+        <div id = "header">
+            <h1><a href="main.html"><img src="/images/logo.png" alt="logo" width="80" height="80"/>한별한의원</a></h1>
+        </div>
+        <div id = "navigation">
+            <ul>
+                <li><a href="intro.html" class="btn">원장 소개</a></li>
+                <li><a href="service_info.html" class="btn">진료 안내</a></li>
+                <li><a href="qna.html" class="btn">의료 상담</a></li>
+                <li><a href="notice.html" class="btn">공지 사항</a></li>
+                <li><a href="http://www.hanstar21.com/" class="btn">한별 여성의원</a></li>
+            </ul>
+        </div>
+        <div id = "contents">
+            <br />
+            <img id="mainpic" src="/images/ent.jpg" alt="한별한의원" width = 700 height = 400/>
+            <br />
+            <h2 class="semititle">한별한의원에 오신 것을</h2><h2 class="semititle">환영합니다!</h2>
+            <p class="maingreet">와주셔서 감사합니다.<br />와주셔서 감사합니다.<br />와주셔서 감사합니다.</p>
+            <p class="mover"></p>
+            <br />
+            <h2 class="semititle2">한별한의원 이모저모</h2>
+            <p>크게 보시려면 클릭하세요.</p>
+            <div class="grid-image">
+                <img alt="1" src="/images/1.jpg" onClick="popup1()" style="cursor:hand" height = 150/>
+                <img alt="2" src="/images/2.jpg" onClick="popup2()" style="cursor:hand" height = 150/>
+                <img alt="3" src="/images/3.jpg" onClick="popup3()" style="cursor:hand" height = 150/>
+                <img alt="4" src="/images/4.jpg" onClick="popup4()" style="cursor:hand" height = 150/>
+                <img alt="5" src="/images/5.jpg" onClick="popup5()" style="cursor:hand" height = 150/>
+                <img alt="6" src="/images/6.jpg" onClick="popup6()" style="cursor:hand" height = 150/>
+                <img alt="7" src="/images/7.jpg" onClick="popup7()" style="cursor:hand" height = 150/>
+                <img alt="8" src="/images/8.jpg" onClick="popup8()" style="cursor:hand" height = 150/>
+              </div>
+            <br />
+            <video width="390" height="260" autoplay muted>
+                <source src="samplevideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            
+            <div id="map" style="width: 390px; height: 260px;"></div>
+            <script>
+
+                var mymap = L.map('map').setView([35.83101203190144, 127.15859086919606], 15);
+            
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                    maxZoom: 18,
+                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                    id: 'mapbox/streets-v11',
+                    tileSize: 512,
+                    zoomOffset: -1
+                }).addTo(mymap);
+
+                L.marker([35.83101203190144, 127.15859086919606]).addTo(mymap)
+		.bindPopup("<b>한별한의원</b><br />전라북도 전주시 덕진구 견훤로 215").openPopup();
+            
+            </script>
+            <p class="way">
+                <h3 class="semititle2">오시는 길</h3><br />
+                오시는 길 소개<br />
+                오시는 길 소개<br />
+                오시는 길 소개
+            </p>
+            <p class="spacer"></p>
+        </div>
+        <div id = "footer_wrap">
+            <div id = "footer">
+                <p>
+                    <br />
+                    대표자 : 고영철&nbsp;&nbsp;&nbsp;&nbsp;상호명 : 한별한의원&nbsp;&nbsp;&nbsp;&nbsp;전화 번호 : 063)241-7510&nbsp;&nbsp;&nbsp;&nbsp;주소 : 전라북도 전주시 덕진구 견훤로 215(인후동)<br />
+                    팩스 : 050)4084-9202&nbsp;&nbsp;&nbsp;&nbsp;휴대 전화 : 010)5234-9202<br />
+                    정성으로 진료하겠습니다.<br /> <a href="https://kor.pngtree.com/free-backgrounds'">무료 배경 사진 Pngtree.com</a>
+                    &nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
