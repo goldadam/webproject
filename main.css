@@ -193,6 +193,12 @@ a {
     margin:0.8% 0.8% 0.8% 0.8%;
     transition-duration: 1s;
 }
+.grid-image jpeg{
+    width:calc((33.333% - 0.83%)/3);
+    height:calc((33.333% - 0.83%)/3);
+    margin:0.8% 0.8% 0.8% 0.8%;
+    transition-duration: 1s;
+}
 
 .grid-image img:hover {
     filter: brightness(70%);

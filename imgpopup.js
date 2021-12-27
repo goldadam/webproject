@@ -1,5 +1,5 @@
 function popup1(){
-    window.open("images/1.jpg","new", 
+    window.open("images/1.jpeg","new", 
    "width=600, height=800, left=330, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
 }
 function popup2(){
@@ -7,7 +7,7 @@ function popup2(){
    "width=600, height=800, left=330, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
 }
 function popup3(){
-    window.open("images/3.jpg","new", 
+    window.open("images/3.jpeg","new", 
    "width=600, height=800, left=330, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
 }
 function popup4(){
@@ -15,7 +15,7 @@ function popup4(){
    "width=600, height=800, left=330, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
 }
 function popup5(){
-    window.open("images/5.jpg","new", 
+    window.open("images/5.jpeg","new", 
    "width=600, height=800, left=330, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
 }
 function popup6(){
@@ -27,6 +27,6 @@ function popup7(){
    "width=600, height=800, left=330, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
 }
 function popup8(){
-    window.open("images/8.jpg","new", 
+    window.open("images/8.jpeg","new", 
    "width=600, height=800, left=330, top=30, scrollbars=no,titlebar=no,status=no,resizable=no,fullscreen=no");
 }
