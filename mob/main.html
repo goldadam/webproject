@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+	<title>한별한의원에 오신 것을 환영합니다</title>
+
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+	<link rel="stylesheet" type="text/css" href="main.css" title="style" />
+    <script src="main.js" type="text/javascript"></script>
+    <script src="imgpopup.js" type="text/javascript"></script>
+    <script src="prototype.js" type="text/javascript"></script>
+    <script>
+        WebFont.load({
+            google: {
+            families: ['NanumB', 'NanumR', 'NanumEB']
+            }
+        });
+    </script>
+    <script language="JavaScript">
+        function change(form){
+            if(form.url.selectedIndex != 0)
+            parent.location = form.url.options[form.url.selectedIndex].value
+        }
+        function setCookie(name, value, expiredays){
+            var todayDate = new Date();
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+
+        }
+        function getCookie(name){
+            var nameOfCookie = name + "=";
+            var x = 0;
+                while(x <= document.cookie.length){
+                    var y = (x + nameOfCookie.length);
+                    if(document.cookie.substring(x,y) == nameOfCookie){
+                        if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+                            endOfCookie = document.cookie.length;
+                        return unescape(document.cookie.substring(y, endOfCookie)); 
+                    }
+                    x = document.cookie.indexOf(" ", x) + 1;
+                    if(x == 0)
+                    break;
+                }
+                return " ";
+        }
+        if ( getCookie( "Notice" ) != "done" ) {
+            noticeWindow  =  window.open('noticeJS.html','notice','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=600');
+            noticeWindow.opener = self;
+        }
+        
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+
+<html lang="ko">
+<body>
+    <div id = "total">
+        <div id = "header">
+            <h1><a href="main.html"><img src="images/logo.png" alt="logo" width=6.6% height=6.6%/>한별한의원</a></h1>
+        </div>
+        <div id = "navigation">
+            <ul>
+                <li><a href="intro.html" class="btn">원장 소개</a></li>
+                <li><a href="service_info.html" class="btn">진료 안내</a></li>
+                <li><a href="qna.html" class="btn">의료 상담</a></li>
+                <li><a href="notice.html" class="btn">공지 사항</a></li>
+                <li><a href="http://www.hanstar21.com/" class="btn">한별 여성의원</a></li>
+            </ul>
+        </div>
+        <div id="mobli">
+            <hr/><p><a href="intro.html" class="btn">원장 소개</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="service_info.html" class="btn">진료 안내</a><br/>
+            <span id="no"><br/>의료 상담과 공지 사항 게시판은 컴퓨터로 이용해주세요.</span></p><hr/>
+        </div>
+        <div id = "contents">
+            <br />
+            <img id="mainpic" src="images/입구.jpeg" alt="한별한의원" width = 58% height = 33.3%/>
+            <br />
+            <h2 class="semititle">한별한의원에 오신 것을</h2><h2 class="semititle">환영합니다!</h2>
+            <p class="maingreet">찾아주셔서 감사합니다.<br />정성을 다해 진료하겠습니다.<br />좋은 약재만 사용하겠습니다.</p>
+            <p class="mover"></p>
+            <br />
+            <div id="mobnopic">
+            <h2 class="semititle2">한별한의원 이모저모</h2>
+            <p>크게 보시려면 클릭하세요.</p>
+            <div class="grid-image">
+                <img alt="1" src="images/1.jpeg" onClick="popup1()" style="cursor:hand" />
+                <img alt="2" src="images/2.jpg" onClick="popup2()" style="cursor:hand" />
+                <img alt="3" src="images/3.jpeg" onClick="popup3()" style="cursor:hand" />
+                <img alt="4" src="images/4.jpg" onClick="popup4()" style="cursor:hand" />
+                <img alt="5" src="images/5.jpeg" onClick="popup5()" style="cursor:hand" />
+                <img alt="6" src="images/6.jpg" onClick="popup6()" style="cursor:hand" />
+                <img alt="7" src="images/7.jpg" onClick="popup7()" style="cursor:hand" />
+                <img alt="8" src="images/8.jpeg" onClick="popup8()" style="cursor:hand" />
+              </div></div>
+            <br />
+            <video width="390" height="260" autoplay muted>
+                <source src="samplevideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            
+            <div id="map"></div>
+            <script>
+
+                var mymap = L.map('map').setView([35.83101203190144, 127.15859086919606], 15);
+            
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                    maxZoom: 18,
+                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                    id: 'mapbox/streets-v11',
+                    tileSize: 512,
+                    zoomOffset: -1
+                }).addTo(mymap);
+
+                L.marker([35.83101203190144, 127.15859086919606]).addTo(mymap)
+		.bindPopup("<b>한별한의원</b><br />전라북도 전주시 덕진구 견훤로 215").openPopup();
+            
+            </script>
+            <p class="way">
+                <h3 class="semititle2">오시는 길</h3>
+                다이소 인후2호점에서 직진거리 200m<br />
+                인후초등학교에서 동진아파트 방면으로 600m<br />
+                
+            </p>
+            <p class="spacer"></p>
+        </div>
+        <div id = "footer_wrap">
+            <div id = "footer">
+                <p>
+                    <br />
+                    대표자 : 고영철&nbsp;&nbsp;&nbsp;&nbsp;상호명 : 한별한의원&nbsp;&nbsp;&nbsp;&nbsp;전화 번호 : 063)241-7510&nbsp;&nbsp;&nbsp;&nbsp;주소 : 전라북도 전주시 덕진구 견훤로 215(인후동)<br />
+                    팩스 : 050)4084-9202&nbsp;&nbsp;&nbsp;&nbsp;휴대 전화 : 010)5234-9202<br />
+                    정성으로 진료하겠습니다.<br /> <a href="https://kor.pngtree.com/free-backgrounds'">무료 배경 사진 Pngtree.com</a>
+                    &nbsp;
+                </p>
+            </div>
+            <div id="footer_mob">
+                <p>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;대표자 : 고영철&nbsp;&nbsp;&nbsp;&nbsp;상호명 : 한별한의원&nbsp;&nbsp;&nbsp;&nbsp;전화 번호 : 063)241-7510&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;주소 : 전라북도 전주시 덕진구 견훤로 215(인후동)<br />
+                    팩스 : 050)4084-9202&nbsp;&nbsp;&nbsp;&nbsp;휴대 전화 : 010)5234-9202<br />
+                    정성으로 진료하겠습니다.<br /> <a href="https://kor.pngtree.com/free-backgrounds'">무료 배경 사진 Pngtree.com</a>
+                    &nbsp;
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
